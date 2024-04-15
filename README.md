@@ -18,4 +18,4 @@ pip3 install python-freshdesk
 
 <img width="691" alt="2024-04-16 06_32_45-Clipboard" src="https://github.com/dungleonhart/freshdesk-batch-operation/assets/16498492/7c97aa56-3041-4005-8bfd-9ed26845d50a">
 
-8. Run **main.ipynb** file step by step
+7. Run **main.ipynb** file step by step
