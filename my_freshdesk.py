@@ -80,11 +80,17 @@ class MyFreshdesk():
                 changed_articles.append(article_id)
 
         return changed_articles
+    
+    def revert_articles_with_old_content(self, article_ids):
+        self.update_articles(self.old_articles_dir, article_ids)
 
     def update_articles_with_new_content(self, article_ids):
+        self.update_articles(self.new_articles_dir, article_ids)
+
+    def update_articles(self, dir, article_ids):
         for article_id in article_ids:
             # read new content from file
-            with open(f"{self.new_articles_dir}/{article_id}.html", 'r', encoding='utf-8') as f:
+            with open(f"{dir}/{article_id}.html", 'r', encoding='utf-8') as f:
                 new_content = f.read()
 
             # Your Freshdesk domain and API key
